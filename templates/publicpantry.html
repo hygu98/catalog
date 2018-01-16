@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Not Your Pantry!
+			</h1>
+
+		</div>
+	</div>
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+
+		</div>
+		<div class="col-md-7"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p>You are only to view and/or edit your pantry.</p>
+			<p>Please ensure you are logged in and are accessing your pantry only.</p>
+		</div>
+	{% endif %}
+{% endblock %}

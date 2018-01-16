@@ -1,0 +1,58 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Edit Pantry Item</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "POST">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
+
+					<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+
+					<label for="price">Price:</label>
+					<div class="input-group">
+						<div class="input-group-addon">$</div>
+						<input type ="text" maxlength="10" class="form-control" name="price" value="{{item.price}}">
+					</div>
+					<label for="foodGroup">Food Group:</label>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="foodGroup" id="group1" value="FruitsVeggies" {% if item.foodGroup == 'FruitsVeggies'%}checked{%endif%}>Fruits and Vegetables
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="foodGroup" id="group2" value="Grains" {% if item.foodGroup == 'Grains' %}checked{%endif%}>Grains
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="foodGroup" id="group3" value="Dairy" {% if item.foodGroup == 'Dairy'%}checked{%endif%}>Dairy
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="foodGroup" id="group4" value="Protein" {%if item.foodGroup =='Protein'%}checked{%endif%}>Protein
+					  </label>
+					</div>
+					<button type="submit" class="btn btn-default" id="submit" type="submit">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+					<a href = '{{url_for('showPantryItems', pantry_id = pantry_id )}}'>
+						<button class="btn btn-default delete">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
