@@ -1,3 +1,28 @@
+#Linux Deployment Project Readme
+
+* IP Address: 18.217.240.195
+* URL: http://18.217.240.195
+
+List of software deployed to server:
+
+        flask
+        sqlalchemy
+	psychopg2
+        oauth2client
+        httplib2
+        json
+        requests
+	postgresql
+
+This server has been configured to run a Python Flask Application utilizing the libraries listed above.  In order for the application to properly communicate with clients, port 80 is open for HTTP traffic, port 123 is open for NTP, and port 22 is open for SSH.
+
+This application is hosted on an Amazon AWS Lightsail Server and utilizes the Google + and Facebook login API's.
+
+
+Continue reading below for more information on the PantryApp
+
+
+
 # ItemCatalogAppProject README
 
 ## What is it???
